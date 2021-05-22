@@ -480,10 +480,10 @@ class XyCheckboxGroup extends HTMLElement {
             this.tip.show = 'show';
             this.invalid = true;
             if(this.len<this.min){
-                this.tip.tips = `请至少选择${this.min}项`;
+                this.tip.tips = `Please select at least${this.min}item`;
             }
             if(this.len>this.max){
-                this.tip.tips = `至多选择${this.max}项`;
+                this.tip.tips = `Choose at most${this.max}item`;
             }
             return false;
         }

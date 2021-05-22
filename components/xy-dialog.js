@@ -326,12 +326,12 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, oktext, content, ok} = arguments[0];
             dialog.title = title||'Alert';
-            dialog.oktext = oktext||'确 定';
+            dialog.oktext = oktext||'Sure';
             dialog.onsubmit = ok||null;
             dialog.innerHTML = content||'';
         }else{
             dialog.title = 'Alert';
-            dialog.oktext = '确 定';
+            dialog.oktext = 'Sure';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
         }
@@ -347,12 +347,12 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, oktext, content, ok} = arguments[0];
             dialog.title = title||'Info';
-            dialog.oktext = oktext||'知道了';
+            dialog.oktext = oktext||'Got It';
             dialog.onsubmit = ok||null;
             dialog.innerHTML = content||'';
         }else{
             dialog.title = 'Info';
-            dialog.oktext = '知道了';
+            dialog.oktext = 'Got It';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
         }
@@ -368,12 +368,12 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, oktext, content, ok} = arguments[0];
             dialog.title = title||'Success';
-            dialog.oktext = oktext||'知道了';
+            dialog.oktext = oktext||'Got It';
             dialog.onsubmit = ok||null;
             dialog.innerHTML = content||'';
         }else{
             dialog.title = 'Success';
-            dialog.oktext = '知道了';
+            dialog.oktext = 'Got It';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
         }
@@ -389,12 +389,12 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, oktext, content, ok} = arguments[0];
             dialog.title = title||'Error';
-            dialog.oktext = oktext||'知道了';
+            dialog.oktext = oktext||'Got It';
             dialog.onsubmit = ok||null;
             dialog.innerHTML = content||'';
         }else{
             dialog.title = 'Error';
-            dialog.oktext = '知道了';
+            dialog.oktext = 'Got It';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
         }
@@ -410,12 +410,12 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, oktext, content, ok} = arguments[0];
             dialog.title = title||'Warning';
-            dialog.oktext = oktext||'知道了';
+            dialog.oktext = oktext||'Got It';
             dialog.onsubmit = ok||null;
             dialog.innerHTML = content||'';
         }else{
             dialog.title = 'Warning';
-            dialog.oktext = '知道了';
+            dialog.oktext = 'Got It';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
         }
@@ -433,16 +433,16 @@ export default {
             const { type, title, content, oktext, canceltext, ok, cancel} = arguments[0];
             dialog.type = type||'confirm';
             dialog.title = title||'Confirm';
-            dialog.oktext = oktext||'确 定';
-            dialog.canceltext = canceltext||'取 消';
+            dialog.oktext = oktext||'Sure';
+            dialog.canceltext = canceltext||'Cancel';
             dialog.innerHTML = content||'';
             dialog.onsubmit = ok||null;
             dialog.oncancel = cancel||null;
         }else{
             dialog.type = 'confirm';
             dialog.title = 'Confirm';
-            dialog.oktext = '确 定';
-            dialog.canceltext = '取 消';
+            dialog.oktext = 'Sure';
+            dialog.canceltext = 'Cancel';
             dialog.innerHTML = arguments[0]||'';
             dialog.onsubmit = arguments[1]||null;
             dialog.oncancel = arguments[2]||null;
@@ -460,8 +460,8 @@ export default {
         if( typeof arguments[0] === 'object' ){
             const { title, content, oktext, canceltext, ok, cancel} = arguments[0];
             dialog.title = title||'Prompt';
-            dialog.oktext = oktext||'确 定';
-            dialog.canceltext = canceltext||'取 消';
+            dialog.oktext = oktext||'Sure';
+            dialog.canceltext = canceltext||'Cancel';
             dialog.innerHTML = content||'';
             dialog.input.onsubmit = dialog.onsubmit = ()=>{
                 const value = dialog.input.value;
@@ -469,15 +469,15 @@ export default {
                     ok&&ok(value);
                     dialog.open = false;
                 }else{
-                    XyMessage.error('内容不能为空');
+                    XyMessage.error('the content can not be blank');
                     dialog.input.focus();
                 }
             };
             dialog.oncancel = cancel||null;
         }else{
             dialog.title = 'Prompt';
-            dialog.oktext = '确 定';
-            dialog.canceltext = '取 消';
+            dialog.oktext = 'Sure';
+            dialog.canceltext = 'Cancel';
             dialog.innerHTML = arguments[0]||'';
             dialog.input.onsubmit = dialog.onsubmit = ()=>{
                 const value = dialog.input.value;
@@ -485,7 +485,7 @@ export default {
                     arguments[1]&&arguments[1](value);
                     dialog.open = false;
                 }else{
-                    XyMessage.error('内容不能为空');
+                    XyMessage.error('the content can not be blank');
                     dialog.input.focus();
                 }
             };

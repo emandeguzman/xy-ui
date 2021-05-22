@@ -319,7 +319,7 @@ class XyRadioGroup extends HTMLElement {
             this.focus();
             this.invalid = true;
             this.tip.show = 'show';
-            this.tip.tips = '请选择1项';
+            this.tip.tips = 'please choose1item';
             return false;
         }
     }

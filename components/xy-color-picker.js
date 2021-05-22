@@ -551,8 +551,8 @@ export default class XyColorPicker extends HTMLElement {
             <xy-button class="color-btn" id="color-btn" ${this.disabled? "disabled" : ""}></xy-button>
             <xy-popcon id="popcon">
                 <div class="pop-footer">
-                    <xy-button autoclose>取 消</xy-button>
-                    <xy-button type="primary" id="btn-submit" autoclose>确 认</xy-button>
+                    <xy-button autoclose>Cancel</xy-button>
+                    <xy-button type="primary" id="btn-submit" autoclose>Confirm</xy-button>
                 </div>
             </xy-popcon>
         </xy-popover>

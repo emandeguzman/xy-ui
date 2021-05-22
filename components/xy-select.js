@@ -115,7 +115,7 @@ export default class XySelect extends HTMLElement {
             display:none;
             box-sizing: border-box;
             width:100%;
-            content:'没有匹配到任何选项';
+            content:'No options match';
             padding: .25em .625em;
             line-height: 1.8;
             color:var(--fontColor,#333);
@@ -395,7 +395,7 @@ export default class XySelect extends HTMLElement {
     }
 
     get errortips() {
-        return this.getAttribute('errortips')||'请选择一项';
+        return this.getAttribute('errortips')||'Please select one';
     }
 
     get required() {
@@ -415,7 +415,7 @@ export default class XySelect extends HTMLElement {
     }
 
     get placeholder() {
-        return this.getAttribute('placeholder')||'请选择';
+        return this.getAttribute('placeholder')|| 'Please Choose';
     }
 
     set required(value) {
